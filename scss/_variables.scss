@@ -1,0 +1,34 @@
+// Variables for configuring Dropdown styles
+
+// Contents
+
+$enablePositionMedia: false; // Position classes for different media
+$enableRounded: false;       // Rounded classes
+$enableRoundedMedia: false;  // Rounded classes for different media
+
+// Class
+
+$classBase: "mt-dropdown"; 
+$classShow: 'show';        
+
+// Position
+
+$directionValue: 100%;   // It is not recommended to change it
+$directionIndent: .5rem; 
+$alignmentValue: 0%;     // It is not recommended to change it
+$alignmentIndent: 0rem;  
+
+// Media breakpoints
+
+$mediaBreakpoints: (
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+);
+
+// Others
+
+$zIndexMenu: 1000;            
+$transitionDurationShow: .3s; 
+$borderRadius: .3rem;         

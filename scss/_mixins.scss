@@ -1,0 +1,111 @@
+@mixin dropdownRounded($media: '') {
+    @if ($media != '') {
+        $media: "-" + $media;
+    }
+    
+    $vertical: ("t": "top", "b": "bottom");
+    $horizontal: ("s": "left", "e": "right");
+
+    .#{$classBase}-menu.#{$classBase}#{$media}-r {
+        border-radius: $borderRadius;
+
+        @each $c, $n in $vertical {
+            &#{$c} {
+                &#{'s'} {
+                    border-#{$n}-right-radius: 0;
+                }
+
+                &#{'e'} {
+                    border-#{$n}-left-radius: 0;
+                }
+
+                &, &#{'s'} {
+                    border-#{$n}-left-radius: $borderRadius;
+                }
+
+                &, &#{'e'} {
+                    border-#{$n}-right-radius: $borderRadius;
+                }
+            }
+        }
+
+        @each $c, $n in $horizontal {
+            &#{$c} {
+                border-top-#{$n}-radius: $borderRadius;
+                border-bottom-#{$n}-radius: $borderRadius;
+            }
+        }
+    }
+}
+
+// variables for control position
+$dVal: calc(#{$directionValue} + #{$directionIndent});
+$aVal: calc(#{$alignmentValue} + #{$alignmentIndent});
+
+@mixin dropdownPositionMake($c, $d, $a: '') {
+    $top: unset;
+    $bottom: unset;
+    $left: unset;
+    $right: unset;
+
+    // set direction
+    @if ($d == 't') {
+        $bottom: $dVal;
+    } @else if ($d == 'b') {
+        $top: $dVal;
+    } @else if ($d == 's') {
+        $right: $dVal;
+    } @else if ($d == 'e') {
+        $left: $dVal;
+    } @else {
+        $top: $dVal;
+    }
+
+    $c: $c + $d;
+
+    @if ($a != '') {
+        @if ($a == 'b') {
+            $bottom: $aVal;
+        } @else if ($a == 't') {
+            $top: $aVal;
+        } @else if ($a == 'e') {
+            $right: $aVal;
+        } @else if ($a == 's') {
+            $left: $aVal;
+        } @else {
+            $right: $aVal;
+        }
+
+        $c: $c + $a;
+    }
+
+    #{$c} {
+        top: $top;
+        bottom: $bottom;
+        left: $left;
+        right: $right;
+    }
+}
+
+@mixin dropdownPosition($media: '') {
+    $c: ".#{$classBase}.#{$classShow} .#{$classBase}-menu.#{$classBase}";
+
+    @if ($media != '') {
+        $c: $c + "-#{$media}";
+    }
+
+    $c: $c + "-p";
+
+    $horizontal: ('','t','b');
+    $vertical: ('','s','e');
+
+    @each $a in $vertical {
+        @include dropdownPositionMake($c, 't', $a);
+        @include dropdownPositionMake($c, 'b', $a);
+    }
+    
+    @each $a in $horizontal {
+        @include dropdownPositionMake($c, 's', $a);
+        @include dropdownPositionMake($c, 'e', $a);
+    }
+}

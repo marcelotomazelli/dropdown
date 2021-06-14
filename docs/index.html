@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dropdown</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./assets/style.min.css" />
+    <link rel="icon" href="./assets/image/favicon.ico">
+</head>
+
+<body>
+    <header class="header">
+        <a href="https://github.com/marcelotomazelli/dropdown" class="header-brand" target="_blank">
+            <img src="./assets/image/brand.png" class="header-brand-img" alt="Dropdown" title="Dropdown">
+        </a>
+        <div>
+            <h1>
+                <a href="https://github.com/marcelotomazelli/dropdown" target="_blank"
+                    title="Dropdown repository">Dropdown</a>
+            </h1>
+            <p>
+                <a href="https://github.com/marcelotomazelli" target="_blank" title="Author GitHub">marcelotomazelli</a>
+            </p>
+        </div>
+    </header>
+
+    <main class="main">
+        <article class="main-dropdown">
+            <div id="dropdown-view" class="mt-dropdown">
+                <button class="dropdown-button" data-mt-dropdown="dropdown-view">
+                    <i class="fas fa-th"></i>
+                </button>
+                <div id="dropdown-view-menu" class="mt-dropdown-menu mt-dropdown-pb">
+                    <div class="control-dropdown">
+                        <div class="cd-box cd-direction">
+                            <p class="cd-title">Direction</p>
+                            <ul class="cd-list">
+                                <li class="cd-item">
+                                    <span class="cd-btn" data-cd-change="t"><span></span></span>
+                                </li>
+                                <li class="cd-item">
+                                    <span class="cd-btn" data-cd-change="e"><span></span></span>
+                                </li>
+                                <li class="cd-item">
+                                    <span class="cd-btn active" data-cd-change="b"><span></span></span>
+                                </li>
+                                <li class="cd-item">
+                                    <span class="cd-btn" data-cd-change="s"><span></span></span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="cd-box cd-alignment">
+                            <p class="cd-title">Alignment</p>
+                            <div class="cd-lists">
+                                <ul class="cd-list cd-list-at">
+                                    <li class="cd-item">
+                                        <span class="cd-btn" data-cd-change="ts"><span></span></span>
+                                    </li>
+                                    <li class="cd-item">
+                                        <span class="cd-btn" data-cd-change="te"><span></span></span>
+                                    </li>
+                                </ul>
+                                <ul class="cd-list cd-list-ab active">
+                                    <li class="cd-item">
+                                        <span class="cd-btn" data-cd-change="bs"><span></span></span>
+                                    </li>
+                                    <li class="cd-item">
+                                        <span class="cd-btn" data-cd-change="be"><span></span></span>
+                                    </li>
+                                </ul>
+                                <ul class="cd-list cd-list-as">
+                                    <li class="cd-item">
+                                        <span class="cd-btn" data-cd-change="st"><span></span></span>
+                                    </li>
+                                    <li class="cd-item">
+                                        <span class="cd-btn" data-cd-change="sb"><span></span></span>
+                                    </li>
+                                </ul>
+                                <ul class="cd-list cd-list-ae">
+                                    <li class="cd-item">
+                                        <span class="cd-btn" data-cd-change="et"><span></span></span>
+                                    </li>
+                                    <li class="cd-item">
+                                        <span class="cd-btn" data-cd-change="eb"><span></span></span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </article>
+
+        <article class="main-code">
+            <code class="code">
+                <div class="line">
+                    &lt;<span class="tag">div</span> <span class="attr">id</span>="<span class="attr-id">dropdown-view</span>" <span class="attr">class</span>="<span class="attr-value">mt-dropdown</span>"&gt;
+                </div>
+                <div class="line">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;<span class="tag">button</span> <span class="attr">data-mt-dropdown</span>="<span class="attr-value">dropdown-view</span>"&gt;&lt;/<span class="tag">button</span>&gt;
+                </div>
+                <div class="line">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;<span class="tag">div</span> <span class="attr">id</span>="<span class="attr-id">dropdown-view-menu</span>"
+                </div>
+                <div class="line">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="attr">class</span>="<span id="code-dropdown-view-menu-class" class="attr-class">mt-dropdown-menu mt-dropdown-pb</span>"&gt;
+                </div>
+                <div class="line">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="comment">&lt;!-- content --&gt;</span>
+                </div>
+                <div class="line">
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    &lt;<span class="tag">div</span>&gt;
+                </div>
+                <div class="line">
+                    &lt;<span class="tag">div</span>&gt;
+                </div>
+            </code>
+        </article>
+
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./assets/script.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+/*!
+ * Dropdown V1.0.0 (https://github.com/marcelotomazelli/dropdown)
+ * Copyright 2021-2021 Marcelo Tomazelli
+ * Licensed under MIT (https://github.com/marcelotomazelli/dropdown/blob/main/LICENSE)
+ */
+
+@import "variables";
+@import "mixins";
+
+.#{$classBase} {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.#{$classBase}-menu {
+    z-index: $zIndexMenu;
+    display: block;
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    bottom: 200%;
+}
+
+.#{$classBase}.#{$classShow} .#{$classBase}-menu {
+    visibility: visible;
+    opacity: 1;
+    position: absolute;
+    
+    transition-property: visibility;
+    transition-duration: $transitionDurationShow;
+}
+
+@if ($enableRounded) {
+    @include dropdownRounded();
+
+    @if ($enableRoundedMedia) {
+        @each $name, $value in $mediaBreakpoints {
+            @if ($value != 0) {
+                @media (min-width: #{$value}) {
+                    @include dropdownRounded($name);
+                }
+            }
+        }
+    }
+}
+
+@include dropdownPosition();
+
+@if ($enablePositionMedia) {
+    @each $name, $value in $mediaBreakpoints {
+        @if ($value != 0) {
+            @media (min-width: #{$value}) {
+                @include dropdownPosition($name);
+            }
+        }
+    }
+}

@@ -1,0 +1,112 @@
+/*!
+ * Dropdown V1.0.0 (https://github.com/marcelotomazelli/dropdown)
+ * Copyright 2021-2021 Marcelo Tomazelli
+ * Licensed under MIT (https://github.com/marcelotomazelli/dropdown/blob/main/LICENSE)
+ */
+.mt-dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.mt-dropdown-menu {
+  z-index: 1000;
+  display: block;
+  visibility: hidden;
+  opacity: 0;
+  position: fixed;
+  bottom: 200%;
+}
+
+.mt-dropdown.show .mt-dropdown-menu {
+  visibility: visible;
+  opacity: 1;
+  position: absolute;
+  transition-property: visibility;
+  transition-duration: 0.3s;
+}
+
+.mt-dropdown.show .mt-dropdown-menu.mt-dropdown-pt {
+  top: unset;
+  bottom: calc(100% + 0.5rem);
+  left: unset;
+  right: unset;
+}
+
+.mt-dropdown.show .mt-dropdown-menu.mt-dropdown-pb {
+  top: calc(100% + 0.5rem);
+  bottom: unset;
+  left: unset;
+  right: unset;
+}
+
+.mt-dropdown.show .mt-dropdown-menu.mt-dropdown-pts {
+  top: unset;
+  bottom: calc(100% + 0.5rem);
+  left: calc(0% + 0rem);
+  right: unset;
+}
+
+.mt-dropdown.show .mt-dropdown-menu.mt-dropdown-pbs {
+  top: calc(100% + 0.5rem);
+  bottom: unset;
+  left: calc(0% + 0rem);
+  right: unset;
+}
+
+.mt-dropdown.show .mt-dropdown-menu.mt-dropdown-pte {
+  top: unset;
+  bottom: calc(100% + 0.5rem);
+  left: unset;
+  right: calc(0% + 0rem);
+}
+
+.mt-dropdown.show .mt-dropdown-menu.mt-dropdown-pbe {
+  top: calc(100% + 0.5rem);
+  bottom: unset;
+  left: unset;
+  right: calc(0% + 0rem);
+}
+
+.mt-dropdown.show .mt-dropdown-menu.mt-dropdown-ps {
+  top: unset;
+  bottom: unset;
+  left: unset;
+  right: calc(100% + 0.5rem);
+}
+
+.mt-dropdown.show .mt-dropdown-menu.mt-dropdown-pe {
+  top: unset;
+  bottom: unset;
+  left: calc(100% + 0.5rem);
+  right: unset;
+}
+
+.mt-dropdown.show .mt-dropdown-menu.mt-dropdown-pst {
+  top: calc(0% + 0rem);
+  bottom: unset;
+  left: unset;
+  right: calc(100% + 0.5rem);
+}
+
+.mt-dropdown.show .mt-dropdown-menu.mt-dropdown-pet {
+  top: calc(0% + 0rem);
+  bottom: unset;
+  left: calc(100% + 0.5rem);
+  right: unset;
+}
+
+.mt-dropdown.show .mt-dropdown-menu.mt-dropdown-psb {
+  top: unset;
+  bottom: calc(0% + 0rem);
+  left: unset;
+  right: calc(100% + 0.5rem);
+}
+
+.mt-dropdown.show .mt-dropdown-menu.mt-dropdown-peb {
+  top: unset;
+  bottom: calc(0% + 0rem);
+  left: calc(100% + 0.5rem);
+  right: unset;
+}
